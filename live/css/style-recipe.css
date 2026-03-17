@@ -1,0 +1,149 @@
+/*** PULSE ANIMATION FOR BUTTON */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+
+/*** HERO */
+.hero {
+    padding-top: var(--pad-y-sec);
+    padding-bottom: var(--pad-y-sec-sm);
+}
+.hero #recipe-banner {
+    height: 220px;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--sp-20);
+}
+.metas {
+    display: flex;
+    column-gap: var(--sp-20);
+    row-gap: var(--sp-05);
+}
+.meta {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-05);
+    background-color: var(--clr-bg-subtle-light);
+    padding: 4px 16px;
+    border-radius: var(--input--border-radius);
+}
+.meta img {
+    height: 1em;
+}
+
+
+/*** CONTENT */
+.content {
+    padding-bottom: var(--pad-y-sec-sm);
+}
+.content .ingredients {
+    padding-top: var(--sp-10);
+    border-top: solid 1px var(--clr-bg-subtle-light);
+    gap: var(--sp-05);
+    overflow: hidden;
+}
+
+
+.ingredients .portion-input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: var(--sp-05);
+}
+.ingredients #portion-input {
+    width: 140px;
+    font-weight: var(--fw-bold);
+    font-size: 1em;
+    margin-left: 12px;
+    padding-bottom: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.ingredients #calc-ingr-btn {
+    --btn--width: 140px;
+}
+.ingredients #calc-ingr-btn.refresh {
+    animation: pulse 1s infinite;
+}
+.ingredients #calc-ingr-btn img {
+    height: 1.2em;
+}
+.ingredients #portion-input-notice {
+    color: red;
+}
+
+
+.ingredients table {
+    border-spacing: 0px 6px;
+    --table--radius:  5px;
+}
+.ingredients table tr:nth-child(odd) {
+    background-color: var(--clr-bg-subtle-light);
+}
+.ingredients table td {
+    padding: 8px var(--input--indent);
+}
+.ingredients table tr:nth-child(odd) td {
+    padding: 14px var(--input--indent);
+}
+.ingredients table .ingr-qty {
+    text-align: end;
+    width: 120px;
+    border-top-left-radius: var(--table--radius);
+    border-bottom-left-radius: var(--table--radius);
+}
+.ingredients table .ingr-name {
+    border-top-right-radius: var(--table--radius);
+    border-bottom-right-radius: var(--table--radius);
+}
+
+
+.preparation {
+    padding-top: var(--sp-40);
+}
+.preparation .metas {
+    margin-bottom: var(--sp-10);
+}
+.preparation #recipe-description {
+    max-width: var(--max-width-text);
+}
+
+
+
+.author {
+    padding-top: var(--sp-40);
+}
+#author-meta {
+    display: flex;
+    gap: var(--sp-10);
+    align-items: center;
+}
+#author-meta img {
+    height: 72px;
+    width: 72px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+
+@media(max-width: 511px) {
+    .metas {
+        flex-wrap: wrap;    
+    }    
+    #portion-input {
+        flex-grow: 1;
+    }
+    #calc-ingr-btn {
+        min-width: 100%;
+        margin-left: 0;
+    }
+
+}

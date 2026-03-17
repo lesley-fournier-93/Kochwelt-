@@ -1,0 +1,139 @@
+/*croissant*/
+
+.ct-croissant {
+  flex-direction: row;
+  gap: var(--sp-40);
+}
+
+.ct-croissant .media-block {
+  flex-basis: 45%;
+  aspect-ratio: 390 / 210;
+}
+.ct-croissant img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--img--border-radius);
+  object-fit: cover;
+}
+
+.ct-croissant .text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 560px;
+  gap: var(--sp-20);
+  padding-bottom: var(--sp-10);
+}
+
+
+
+/*recipes*/
+
+#recipes {
+  background-color: #ebebee;
+}
+.headline {
+  display: flex;
+  justify-content: center;
+  margin-top: -32px;
+}
+.ct-recipes .media-block {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-30);
+}
+
+.recipe-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1vw;
+  font-weight: bold;
+}
+
+.img-small  {
+  width: 100%;
+  height: 280px;
+  border-radius: var(--img--border-radius);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+
+/* BLOG */
+
+.ct-blog {
+  flex-direction: row;
+  gap: var(--sp-30);
+}
+.ct-blog .media-block {
+  min-width: 280px;
+}
+
+
+
+/*** BREAKPOINTS */
+
+@media(max-width: 1259px) {
+  .ct-croissant .text-block {
+    flex-shrink: 10;
+  }
+  .img-small {
+    height: 240px;
+  }
+  .ct-blog .media-block {
+    min-width: 240px;
+  }
+  .ct-blog .media-block img {
+    height: 100%;
+  }
+}
+
+@media(max-width: 939px) {
+  .ct-croissant {
+    flex-wrap: wrap;
+  }
+  .ct-croissant .media-block {
+    height: 240px;
+    aspect-ratio: unset;
+    flex-grow: 1;
+  }
+  .ct-croissant .text-block {
+    padding-bottom: 0;
+  }
+  .ct-recipes .media-block {
+    flex-wrap: wrap;
+  }
+ .recipe-links {
+    flex-grow: 1;
+  }
+  .img-small {
+    aspect-ratio: unset;
+  }
+  .ct-blog {
+    flex-wrap: wrap;
+  }
+  .ct-blog .media-block {
+    flex-grow: 1;
+  }
+  .ct-blog .media-block img {
+    height: 240px;
+  }
+}
+
+/* 
+@media(max-width: 819px) {
+  .ct-text a {
+    margin-top: var(--sp-10);
+  }
+  .ct-sub-wok {
+    flex-direction: column
+  }
+} */
+/* 
+@media(max-width: 511px) {
+  .ct-croissant img {
+    height: 30vh;
+  }
+} */
+
